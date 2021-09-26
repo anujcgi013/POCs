@@ -1,0 +1,25 @@
+<h3>All Product Details</h3>
+<hr/>
+<table border="2" width="400"  cellspacing="0"  cellpadding="5">
+    <tr>
+            <th>ProductId</th>
+            <th>Product Name</th>
+            <th>Price</th>
+            <th>Qty</th>
+            <th>Link</th>
+    </tr>   
+    
+    <%  for(let i in  productArray)
+        {  %>
+          <tr>
+            <td> <%=productArray[i].pId %> </td>
+            <td> <%=productArray[i].pName %> </td>
+            <td> <%=productArray[i].price %> </td>
+            <td> <%=productArray[i].qty %> </td>
+            <td>
+                <a href="/products/details/<%=productArray[i].pId %>">Details</a>
+                <a href="/products/create">Add</a>
+            </td>
+          </tr>
+      <% } %>
+</table>
